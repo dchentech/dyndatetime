@@ -1,33 +1,22 @@
-The DHTML Calendar
--------------------
+***************************
+* dyndatetime
+*
+* http://code.google.com/p/dyndatetime
+*
+***************************
 
-  Author: Mihai Bazon, <mihai_bazon@yahoo.com>
-          http://dynarch.com/mishoo/
+This jQuery plugin makes it easy to add date __and__ time selection to single textfield inputs.
 
-  This program is free software published under the
-  terms of the GNU Lesser General Public License.
+`jQuery("input.dateField").dynDateTime();`
 
-  For the entire license text please refer to
-  http://www.gnu.org/licenses/lgpl.html
+This example will make all input elements tagged with the 'dateField' class.  There are plenty of options for configuration; see details in documentation.
 
-Contents
----------
+***************************
 
-  calendar.js     -- the main program file
-  lang/*.js       -- internalization files
-  *.css           -- color themes
-  cal.html        -- example usage file
-  doc/            -- documentation, in PDF and HTML
-  simple-1.html   -- quick setup examples [popup calendars]
-  simple-2.html   -- quick setup example for flat calendar
-  calendar.php    -- PHP wrapper
-  test.php        -- test file for the PHP wrapper
+It is a fork of Dynarch.com's (LGPL) DHTML Calendar v1.0, and the initial codebase is little more then a jQuery wrapper.
 
-Homepage
----------
+Author: Mihai Bazon, <mihai_bazon@yahoo.com>
+    http://dynarch.com/mishoo/
+	http://www.dynarch.com/projects/calendar/
 
-  For details and latest versions please refer to calendar
-  homepage, located on my website:
-
-    http://dynarch.com/mishoo/calendar.epl
-
+The fork source is wonderful tool that ceased LGPL development in 2005.  
