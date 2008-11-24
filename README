@@ -1,11 +1,13 @@
 ***************************
-* dyndatetime
+* dynDateTime: a jQuery date+time picker
 *
 * http://code.google.com/p/dyndatetime
 *
+* Author: thetoolman@gmail.com
+*
 ***************************
 
-This jQuery plugin makes it easy to add date __and__ time selection to single textfield inputs.
+This jQuery plugin makes it easy to add date and time selection to single textfield inputs.
 
 `jQuery("input.dateField").dynDateTime();`
 
