@@ -9,7 +9,7 @@
 
 This jQuery plugin makes it easy to add date and time selection to single textfield inputs.
 
-`jQuery("input.dateField").dynDateTime();`
+jQuery("input.dateField").dynDateTime();
 
 This example will make all input elements tagged with the 'dateField' class.  There are plenty of options for configuration; see details in documentation.
 
