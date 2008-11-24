@@ -6,7 +6,7 @@
 		http://www.dynarch.com/projects/calendar/
 
 	Author:
-		Toolman @ JTeam
+		Toolman
 
 	Goals:
 		Easy jQuery style binding, using calendar-setup.js code	(tick)	
