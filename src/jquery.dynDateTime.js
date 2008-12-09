@@ -71,14 +71,12 @@
 	  
 		  // plugin defaults
 		  $.fn.dynDateTime.defaults = {
-			inputField:    null,
 			displayArea:  null,
 			button:       null,
 			eventName:    "click",
 			ifFormat:     "%Y/%m/%d",
 			daFormat:     "%Y/%m/%d",
 			singleClick:  true,
-			disableFunc:  null,
 			dateStatusFunc: null,
 			dateText:     null,
 			firstDay:     null,
