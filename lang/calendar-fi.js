@@ -1,8 +1,9 @@
-﻿// ** I18N
+﻿/*
+ * Calendar FI language (Finnish, Suomi)
+ * Author: Jarno Käyhkö, <gambler@phnet.fi>
+ * Encoding: UTF-8
+*/
 
-// Calendar FI language (Finnish, Suomi)
-// Author: Jarno Käyhkö, <gambler@phnet.fi>
-// Encoding: UTF-8
 // Distributed under the same terms as the calendar itself.
 
 // full day names

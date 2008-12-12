@@ -1,8 +1,9 @@
-// ** I18N
+/*
+ *  Calendar big5-utf8 language
+ *  Author: Gary Fu, <gary@garyfu.idv.tw>
+ *  Encoding: utf8
+ */
 
-// Calendar big5-utf8 language
-// Author: Gary Fu, <gary@garyfu.idv.tw>
-// Encoding: utf8
 // Distributed under the same terms as the calendar itself.
 
 // For translators: please use UTF-8 if possible.  We strongly believe that

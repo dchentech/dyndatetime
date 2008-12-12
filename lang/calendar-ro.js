@@ -1,4 +1,6 @@
-// ** I18N
+/*
+ * Romainan ?
+ */
 Calendar._DN = new Array
 ("Duminică",
  "Luni",

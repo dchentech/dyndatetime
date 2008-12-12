@@ -1,7 +1,8 @@
-// ** I18N
+/*
+ * Calendar pt_BR language
+ * Author: Adalberto Machado, <betosm@terra.com.br>
+*/
 
-// Calendar pt_BR language
-// Author: Adalberto Machado, <betosm@terra.com.br>
 // Encoding: any
 // Distributed under the same terms as the calendar itself.
 

@@ -1,7 +1,8 @@
-// ** I18N
+/*
+ * Calendar DE language
+ * Author: Jack (tR), <jack@jtr.de>
+*/
 
-// Calendar DE language
-// Author: Jack (tR), <jack@jtr.de>
 // Encoding: any
 // Distributed under the same terms as the calendar itself.
 

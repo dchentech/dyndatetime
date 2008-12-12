@@ -1,8 +1,8 @@
-// ** I18N
+/*
+ * Author: Idan Sofer, <idan@idanso.dyndns.org>
+ * Encoding: UTF-8
+*/
 
-// Calendar EN language
-// Author: Idan Sofer, <idan@idanso.dyndns.org>
-// Encoding: UTF-8
 // Distributed under the same terms as the calendar itself.
 
 // For translators: please use UTF-8 if possible.  We strongly believe that
@@ -83,7 +83,7 @@ Calendar._TT["ABOUT"] =
 "הגירסא האחרונה זמינה ב: http://www.dynarch.com/projects/calendar/\n" +
 "מופץ תחת זיכיון ה GNU LGPL.  עיין ב http://gnu.org/licenses/lgpl.html לפרטים נוספים." +
 "\n\n" +
-בחירת תאריך:\n" +
+"בחירת תאריך:\n" +
 "- השתמש בכפתורים \xab, \xbb לבחירת שנה\n" +
 "- השתמש בכפתורים " + String.fromCharCode(0x2039) + ", " + String.fromCharCode(0x203a) + " לבחירת חודש\n" +
 "- החזק העכבר לחוץ מעל הכפתורים המוזכרים לעיל לבחירה מהירה יותר.";

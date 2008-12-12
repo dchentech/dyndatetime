@@ -1,4 +1,6 @@
-// ** I18N Afrikaans
+/*
+ * I18N Afrikaans 
+ */
 Calendar._DN = new Array
 ("Sondag",
  "Maandag",
