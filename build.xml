@@ -6,6 +6,7 @@
 
 		See: http://code.google.com/p/dyndatetime/
 		Build script inspired by jQuery build system.  Thanks!
+
     -->
 
 	<!-- Setup -->
@@ -16,9 +17,9 @@
     
     <loadfile property="VERSION" srcFile="version.txt" />
     <property description="The output filename, excluding suffix" name="BASE_NAME" value="jquery.dynDateTime" />
-    <property description="Ditribution root" name="DIST_ROOT" value="./dist" />
+    <property description="Distribution root" name="DIST_ROOT" value="./dist" />
 
-    <property description="Folder for output: uncompressed, min, lite and packed target" name="DIST_DIR" value="${DIST_ROOT}/${BASE_NAME}-${VERSION}" />
+    <property description="Versioned distribution folder" name="DIST_DIR" value="${DIST_ROOT}/${BASE_NAME}-${VERSION}" />
     <property description="Uncompressed distribution filename" name="OUT" value="${DIST_DIR}/${BASE_NAME}.js" />
     <property description="Distribution archive filename" name="ARCHIVE" value="${DIST_ROOT}/${BASE_NAME}-${VERSION}.zip" />
 
@@ -31,12 +32,12 @@
 
 	<!-- Targets -->
 
-    <target name="clean">
-        <delete dir="${DIST_ROOT}" />
-    </target>
-
     <target name="all" depends="clean,dyndatetime,min,pack,zip">
         <echo message="All complete." />
+    </target>
+
+    <target name="clean">
+        <delete dir="${DIST_ROOT}" />
     </target>
 
     <target name="dyndatetime"  depends="clean" description="Concatenate source, gather static resources and replaces @VERSION">
@@ -54,24 +55,17 @@
         	<fileset dir="." includes="example.html README"/>
         </copy>
         
-        <echo message="Insert version" />
+        <echo message="Insert version: ${VERSION}" />
     	<java jar="${JS_JAR}" fork="true">
             <arg value="${BUILD_TOOLS_DIR}/build/version.js" />
             <arg value="${OUT}" />
         </java>
-        
-        <echo message="${OUT} built." />
     </target>
 
     <target name="min" depends="dyndatetime" description="Remove all comments and whitespace, no compression, great in combination with GZip">
-        <echo message="${OUT} being 'min'ified." />
-        <java jar="${JS_JAR}" fork="true" failonerror="true">
-            <arg value="${BUILD_TOOLS_DIR}/build/min.js" />
-            <arg value="${OUT}" />
-        </java>
-
 		<for param="file">
 			<path>
+				<fileset file="${OUT}"/>
 				<fileset dir="${DIST_DIR}/lang" includes="*.js" excludes="*.min.js, *.pack.js"/>
 			</path>
 			<sequential>
@@ -85,14 +79,9 @@
     </target>
 
     <target name="pack" depends="dyndatetime" description="Remove all comments and whitespace and compress">
-        <echo message="${OUT} being 'pack'ed." />
-        <java jar="${JS_JAR}" fork="true"  failonerror="true">
-            <arg value="${BUILD_TOOLS_DIR}/build/pack.js" />
-            <arg value="${OUT}" />
-        </java>
-        
         <for param="file">
 			<path>
+				<fileset file="${OUT}"/>
 				<fileset dir="${DIST_DIR}/lang" includes="*.js" excludes="*.min.js, *.pack.js"/>
 			</path>
 			<sequential>
@@ -106,10 +95,10 @@
     </target>
 
 	<target name="zip" depends="dyndatetime">
-		<zip destfile="${ARCHIVE}" basedir="${DIST_DIR}"/>
+		<zip destfile="${ARCHIVE}" basedir="${DIST_ROOT}"/>
 	</target>
 
-	<!--  TODO -->
+	<!-- TODO -->
 	<target name="runtest">
 		<echo message="Running Automated Test Suite" />
 		<java jar="${JS_JAR}" fork="true"  failonerror="true">
