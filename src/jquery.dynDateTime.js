@@ -1801,6 +1801,7 @@ Date.parseDate = function(str, fmt) {
 			d = parseInt(a[i], 10);
 			break;
 
+			case "%F":
 		    case "%m":
 			m = parseInt(a[i], 10) - 1;
 			break;
@@ -1955,6 +1956,7 @@ Date.prototype.print = function (str) {
 	s["%j"] = (dy < 100) ? ((dy < 10) ? ("00" + dy) : ("0" + dy)) : dy; // day of the year (range 001 to 366)
 	s["%k"] = hr;		// hour, range 0 to 23 (24h format)
 	s["%l"] = ir;		// hour, range 1 to 12 (12h format)
+	s["%F"] = 1+m; // month, range 1 to 12
 	s["%m"] = (m < 9) ? ("0" + (1+m)) : (1+m); // month, range 01 to 12
 	s["%M"] = (min < 10) ? ("0" + min) : min; // minute, range 00 to 59
 	s["%n"] = "\n";		// a newline character
