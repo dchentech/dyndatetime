@@ -12,6 +12,9 @@ Calendar._DN = new Array
  "Zaterdag",
  "Zondag");
 
+Calendar._FD = 1; //Maandag
+
+
 Calendar._SDN_len = 2;
 
 Calendar._MN = new Array
