@@ -139,8 +139,13 @@
 				var dateFmt = this_inputField ? opts.ifFormat : opts.daFormat;
 				var mustCreate = false;
 				var cal = window.calendar;
-				if (dateEl)
-					opts.date = Date.parseDate(dateEl.value || dateEl.innerHTML, dateFmt);
+				if (dateEl) {
+					var datevalue = Date.parseDate(dateEl.value || dateEl.innerHTML, dateFmt);
+					if (datevalue != NaN) {
+						opts.date = datevalue;
+					}
+				}	
+					
 				if (!(cal && opts.cache)) {
 					window.calendar = cal = new Calendar(opts.firstDay,
 									     opts.date,
